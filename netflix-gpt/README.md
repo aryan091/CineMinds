@@ -1,4 +1,4 @@
-# Netflix GPT
+# StreamAI 
 
 - Create React App
 - Configured TailWind CSS
@@ -18,6 +18,6 @@
         - Movie Suggestions
             - MoviesList * N
 
-- NetflixGPT
+- StreamAI
     - Search Bar
     - Movies Suggestions
