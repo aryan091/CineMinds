@@ -3,7 +3,7 @@ import { BG_URL } from '../utils/constants'
 const Browse = () => {
   return (
     <div>
-        <img src={BG_URL} alt="Bg-Image" />
+        Browse
     </div>
   )
 }
