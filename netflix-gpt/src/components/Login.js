@@ -3,8 +3,9 @@ import Header from './Header';
 import { BG_URL } from '../utils/constants';
 import { checkValidData } from '../utils/validate';
 import { auth } from '../utils/firebase';
-import {  createUserWithEmailAndPassword , signInWithEmailAndPassword , onAuthStateChanged  } from "firebase/auth";
+import {  createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile   } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -37,8 +38,16 @@ const Login = () => {
  createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
   .then((userCredential) => {
     const user = userCredential.user;
+    updateProfile(user, {
+        displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/59964730?v=4"
+      }).then(() => {
+        navigate("/browse");
+
+      }).catch((error) => {
+       setErrorMessage(error.message);
+      });
+      
     console.log("User : ",user);
-    navigate("/browse");
 
   })
 

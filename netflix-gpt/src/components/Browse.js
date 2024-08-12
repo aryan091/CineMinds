@@ -1,9 +1,9 @@
 import React from 'react'
-import { BG_URL } from '../utils/constants'
+import Header from './Header'
 const Browse = () => {
   return (
     <div>
-        Browse
+        <Header/>
     </div>
   )
 }
