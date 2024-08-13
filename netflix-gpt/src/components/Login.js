@@ -47,7 +47,6 @@ const Login = () => {
         const {uid , email, displayName , photoURL} = auth.currentUser;
 
         dispatch(addUser({uid: uid, email: email, displayName: displayName , photoURL: photoURL}));
-        navigate("/browse");
 
       }).catch((error) => {
         dispatch(removeUser)
@@ -75,7 +74,6 @@ const Login = () => {
   .then((userCredential) => {
     const user = userCredential.user;
     console.log("User : ",user);
-    navigate("/browse");
   })
   .catch((error) => {
     const errorCode = error.code;
