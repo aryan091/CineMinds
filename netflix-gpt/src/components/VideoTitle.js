@@ -4,7 +4,7 @@ import { GrCircleInformation } from "react-icons/gr";
 
 const VideoTitle = ({title , overview}) => {
   return (
-    <div className='video w-screen aspect-video pt-[22.5%] px-24 absolute bg-gradient-to-r from-black'>
+    <div className='video w-screen aspect-video pt-[18.5%] px-24 absolute bg-gradient-to-r from-black'>
 
 
         <h1 className='text-4xl font-bold text-white'>{title}</h1>
