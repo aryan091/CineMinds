@@ -1,17 +1,26 @@
 import React from 'react'
+import { IoMdPlay } from "react-icons/io";
+import { GrCircleInformation } from "react-icons/gr";
 
 const VideoTitle = ({title , overview}) => {
   return (
-    <div className='video pt-36 px-12'>
+    <div className='video w-screen aspect-video pt-[22.5%] px-24 absolute bg-gradient-to-r from-black'>
 
-        <h1 className='text-5xl font-bold'>{title}</h1>
 
-        <p className='py-6  w-1/4'>{overview}</p>
+        <h1 className='text-4xl font-bold text-white'>{title}</h1>
 
-        <div className='buttons flex gap-4'>
-            <button className='bg-white text-black p-4 px-12 text-xl rounded-lg font-semibold'>Play</button>
-            <button className='bg-neutral-500 text-white font-semibold p-4 px-12 text-xl rounded-lg'>More Info</button>
-        </div>
+        <p className='py-6 w-2/5 text-white'>{overview}</p>
+
+        <div className="buttons flex gap-2 items-center">
+  <button className="bg-white text-black py-2 px-6 text-lg rounded-md font-semibold flex items-center justify-center hover:bg-opacity-50 ">
+    <span><IoMdPlay className="inline" size={34} /></span>
+    Play
+  </button>
+  <button className="bg-gray-500 text-white py-2 px-6 text-lg rounded-md font-semibold flex items-center justify-center gap-2 bg-opacity-50 hover:bg-gray-600">
+    <span><GrCircleInformation className="inline" color='white' size={34} /></span>
+    More Info
+  </button>
+</div>
     </div>
   )
 }
