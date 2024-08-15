@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants";
 const useTopRatedMovies = () => {
 
-  const topRatedMovies = useSelector((store) => store?.movies?.topRatedMovies);
+  const topRatedMovies = useSelector(store => store.movies?.topRatedMovies);
 
   const dispatch = useDispatch();
 

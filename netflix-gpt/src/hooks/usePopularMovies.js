@@ -5,7 +5,7 @@ import { API_OPTIONS } from "../utils/constants";
 const usePopularMovies = () => {
   const dispatch = useDispatch();
 
-  const popularMovies = useSelector((store) => store?.movies?.popularMovies);
+  const popularMovies = useSelector(store => store.movies?.popularMovies);
   const getPopularMovies = async () => {
     try {
       const data = await fetch(

@@ -5,7 +5,7 @@ import { API_OPTIONS } from "../utils/constants";
 const useUpcomingMovies = () => {
   const dispatch = useDispatch();
 
-  const upcomingMovies = useSelector((store) => store?.movies?.upcomingMovies);
+  const upcomingMovies = useSelector(store => store.movies?.upcomingMovies);
   const getUpcomingMovies = async () => {
     try {
       const data = await fetch(
