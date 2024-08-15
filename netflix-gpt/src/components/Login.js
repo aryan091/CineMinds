@@ -4,7 +4,6 @@ import { BG_URL } from '../utils/constants';
 import { checkValidData } from '../utils/validate';
 import { auth } from '../utils/firebase';
 import {  createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile   } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 
@@ -16,7 +15,6 @@ const Login = () => {
   const password = useRef(null);
   const name = useRef(null);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
 
@@ -90,10 +88,10 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={BG_URL} alt="Bg-Image" />
+        <img src={BG_URL} alt="Bg-Image"  className='h-screen w-screen object-cover'/>
       </div>
 
-      <form onSubmit={(e) => e.preventDefault()} className="absolute p-12 w-3/12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-75 rounded-lg">
+      <form onSubmit={(e) => e.preventDefault()} className="absolute p-12 w-full md:w-3/12 my-28 bg-black  md:my-36 mx-auto right-0 left-0 text-white bg-opacity-75 rounded-lg">
         <h1 className="font-bold text-3xl py-4">{isSignInForm ? 'Sign In' : 'Sign Up'}</h1>
 
         {!isSignInForm && (
