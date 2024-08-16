@@ -34,8 +34,10 @@ const GPTSearchBar = () => {
 
     const gptQuery = "Act as a Movie Recommendation System and suggest some movies for the query" + searchText.current.value + ". Only give names of Five Movies , comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya";
 
-    const gptResults = []
-  
+    const gptResults = await openAI.chat.completions.create({
+      messages: [{ role: "user", content: gptQuery }],
+      model: "gpt-3.5-turbo",
+    });  
     // Andaz Apna Apna, Hera Pheri, Chupke Chupke, Jaane Bhi Do Yaaro, Padosan
     let gptMovies = gptResults?.choices?.[0]?.message?.content.split(",");
 

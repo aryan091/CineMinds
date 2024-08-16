@@ -8,7 +8,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAUsAuphag35U5Q9JQwG_yIVG31A728cgY",
+  apiKey: process.env.REACT_APP_GOOGLE_FIREBASE_KEY,
   authDomain: "streamai-82d9a.firebaseapp.com",
   projectId: "streamai-82d9a",
   storageBucket: "streamai-82d9a.appspot.com",
