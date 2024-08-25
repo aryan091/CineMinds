@@ -1,4 +1,4 @@
-# StreamAI 
+# CineMinds
 
 - Create React App
 - Configured TailwindCSS
