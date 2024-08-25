@@ -80,7 +80,7 @@ const Header = () => {
               {gptView ? "Home" : "GPT Search"}
             </button>
             
-            <img src={user?.photoURL}  
+            <img src={USER_AVATAR}  
             className='w-12 h-12 hidden md:inline rounded-full'
             alt="User" />
             <button  className=" font-bold text-white bg-gradient-to-b from-black"
